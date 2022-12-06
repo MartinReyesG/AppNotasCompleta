@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3d3c3b</color>
+    <color name="colorPrimaryDark">#7c8071</color>
+    <color name="colorAccent">#487aa1</color>
+    <color name="black">#FF000000</color>
+    <color name="darkGray">#393d42</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_white">#EDE9E9</color>
+    <color name="hintColor">#b2d9f7</color>
+
+    <color name="btnPress">#B8B4B4</color>
+    <color name="fondoCard">#7ABAB8B8</color>
+    <color name="fondo">#7A8A8686</color>
+
+</resources>
