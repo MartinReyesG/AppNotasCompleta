@@ -1,5 +1,6 @@
 package com.bersyte.noteapp.fragmentos
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -22,6 +23,8 @@ class FGAgregarNota : Fragment(R.layout.fg_agregar_nota) {
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var mView: View
 
+    var photoURI: Uri? = null
+    var videoURI: Uri? = null
     //fecha
     var currentDate:String? = null
 
@@ -76,6 +79,18 @@ class FGAgregarNota : Fragment(R.layout.fg_agregar_nota) {
         val noteSubTitle = binding.etNoteSubTitle.text.toString().trim()
         val notetvDate = binding.tvDate.text.toString().trim()
         val noteBody = binding.etNoteBody.text.toString().trim()
+
+        var imagen = ""
+        var video = ""
+
+        if (photoURI != null) {
+            imagen = photoURI.toString()
+        }
+
+        if (videoURI != null) {
+            video = videoURI.toString()
+        }
+
         if (noteTitle.isNotEmpty()) {
             val note = Note(0, noteTitle, noteSubTitle, notetvDate, noteBody)
             noteViewModel.agregarNota(note)

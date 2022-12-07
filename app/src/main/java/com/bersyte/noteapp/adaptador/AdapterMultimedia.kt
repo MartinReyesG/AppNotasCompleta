@@ -1,4 +1,4 @@
-package com.bersyte.noteapp.fragmentos
+package com.bersyte.noteapp.adaptador
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,12 +10,11 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bersyte.noteapp.R
 import com.bersyte.noteapp.db.NoteDatabase
 import com.bersyte.noteapp.model.Multimedia
 
-class MultimediaAdapter (var multimedia: List<Multimedia>): RecyclerView.Adapter<MultimediaAdapter.ViewHolder>(){
+class AdapterMultimedia (var multimedia: List<Multimedia>): RecyclerView.Adapter<AdapterMultimedia.ViewHolder>(){
 
     class ViewHolder(v : View) : RecyclerView.ViewHolder(v){
         var description: TextView

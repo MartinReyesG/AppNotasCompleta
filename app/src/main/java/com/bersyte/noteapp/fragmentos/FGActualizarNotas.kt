@@ -97,6 +97,7 @@ class FGActualizarNotas : Fragment(R.layout.fg_actualizar_nota) {
     }
 
     private fun saveNote() {
+
         val title = binding.etNoteTitleUpdate.text.toString().trim()
         val subTitle = binding.etNoteSubTitleUpdate.text.toString().trim()
         val date = binding.tvNoteDateUpdate.text.toString().trim()

@@ -4,7 +4,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
     android:background="@color/fondo"
-                tools:context=".fragmentos.PhotoFragment">
+                tools:context=".fragmentos.FragmentPhoto">
 
     <RelativeLayout
         android:id="@+id/linearLayout2"

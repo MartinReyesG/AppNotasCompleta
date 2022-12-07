@@ -73,6 +73,11 @@
                             android:maxLines="1"
                             android:textColor="@color/darkGray" />
 
+                        <CheckBox
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content">
+
+                        </CheckBox>
                     </LinearLayout>
 
 

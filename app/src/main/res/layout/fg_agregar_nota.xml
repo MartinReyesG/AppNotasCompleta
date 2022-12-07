@@ -111,6 +111,7 @@
     </ScrollView>
 
     <LinearLayout
+
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"

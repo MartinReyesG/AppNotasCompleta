@@ -152,5 +152,5 @@
             android:src="@drawable/ic_snippet_folder" />
 
     </LinearLayout
-    >
+>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 
-class AudioFragment : Fragment(){
+class FragmentAudio : Fragment(){
 
     private var mStartRecording: Boolean = true
     private var fileName: String = ""

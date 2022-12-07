@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bersyte.noteapp.R
+import com.bersyte.noteapp.adaptador.AdapterMultimedia
 import com.bersyte.noteapp.db.NoteDatabase
 import com.bersyte.noteapp.model.Multimedia
 import kotlinx.coroutines.launch
@@ -30,7 +31,7 @@ class ViewMultimediaFragment : Fragment() {
             multimedia = NoteDatabase.getInstance(requireActivity().applicationContext).MultimediaDao().getMultimedia(id)
         }
 
-        rv.adapter = MultimediaAdapter(multimedia)
+        rv.adapter = AdapterMultimedia(multimedia)
         rv.layoutManager = LinearLayoutManager(this@ViewMultimediaFragment.requireContext())
 
         return root.rootView

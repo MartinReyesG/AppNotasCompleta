@@ -88,7 +88,7 @@
 
     <fragment
         android:id="@+id/photoFragment"
-        android:name="com.bersyte.noteapp.fragmentos.PhotoFragment"
+        android:name="com.bersyte.noteapp.fragmentos.FragmentPhoto"
         android:label="fragment_photo"
         tools:layout="@layout/fragment_photo" >
         <!--<action
@@ -177,7 +177,7 @@
         tools:layout="@layout/fragment_view_photo" />
     <fragment
         android:id="@+id/videoFragment"
-        android:name="com.bersyte.noteapp.fragmentos.VideoFragment"
+        android:name="com.bersyte.noteapp.fragmentos.FragmentVideo"
         android:label="fragment_video"
         tools:layout="@layout/fragment_video" />
     <fragment
@@ -187,7 +187,7 @@
         tools:layout="@layout/fragment_view_video" />
     <fragment
         android:id="@+id/audio"
-        android:name="com.bersyte.noteapp.fragmentos.AudioFragment"
+        android:name="com.bersyte.noteapp.fragmentos.FragmentAudio"
         android:label="fragment_audio"
         tools:layout="@layout/fragment_audio" />
     <fragment
