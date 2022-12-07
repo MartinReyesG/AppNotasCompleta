@@ -138,8 +138,10 @@ class FGAgregarTarea : Fragment(R.layout.fg_agregar_tarea) {
         val tareaSubTitle = binding.etTareaSubTitle.text.toString().trim()
         val tareatvDate = binding.tvDateTarea.text.toString().trim()
         val tareaBody = binding.etNoteBody.text.toString().trim()
+        val dates=binding.txtDate.text.toString().trim()
+        val times=binding.txtHour.text.toString().trim()
 
-        if (tareaTitle.isNotEmpty()) {
+        if (tareaTitle.isNotEmpty() && dates.isNotEmpty() && times.isNotEmpty()) {
             val tarea = Tarea(0, tareaTitle, tareaSubTitle, tareatvDate, tareaBody)
             scheduleNotificaction(tareaTitle)
 
@@ -153,7 +155,7 @@ class FGAgregarTarea : Fragment(R.layout.fg_agregar_tarea) {
             view.findNavController().navigate(R.id.action_newTareaFragment_to_homeFragment)
 
         } else {
-            activity?.toast("Ingresa un Titulo")
+            activity?.toast("Ingresa un titulo, fecha u hora")
         }
     }
 

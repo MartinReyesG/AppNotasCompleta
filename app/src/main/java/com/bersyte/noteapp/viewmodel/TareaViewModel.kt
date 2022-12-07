@@ -9,6 +9,7 @@ import com.bersyte.noteapp.repositorio.RepositorioNotas
 import com.bersyte.noteapp.repositorio.RepositorioTareas
 import kotlinx.coroutines.launch
 
+//estos archivos se encargan de las corrutinas de los view model para no consumir tantos recursos
 class TareaViewModel(
     app: Application,
     private val repositorioTareas: RepositorioTareas

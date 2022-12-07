@@ -137,8 +137,10 @@ class FGActualizarTareas : Fragment(R.layout.fg_actualizar_tarea) {
         val subTitle = binding.etTareaSubTitleUpdate.text.toString().trim()
         val date = binding.tvTareaDateUpdate.text.toString().trim()
         val body = binding.etTareaBodyUpdate.text.toString().trim()
+        val dates=binding.txtDate.text.toString().trim()
+        val times=binding.txtHour.text.toString().trim()
 
-        if (title.isNotEmpty()) {
+        if (title.isNotEmpty()  && dates.isNotEmpty() && times.isNotEmpty()) {
             scheduleNotificaction(title)
             val tarea = Tarea(currentTarea.id, title, subTitle, date, body)
             tareaViewModel.actualizarTarea(tarea)

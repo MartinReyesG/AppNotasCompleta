@@ -15,10 +15,10 @@ import com.bersyte.noteapp.viewmodel.TareaViewModelProviderFactory
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var navController: NavController
-    private lateinit var binding: ActivityMainBinding
-    lateinit var noteViewModel: NoteViewModel
-    lateinit var tareaViewModel: TareaViewModel
+    //lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding //enlace de los datos con las vistas
+    lateinit var noteViewModel: NoteViewModel //view model de notas
+    lateinit var tareaViewModel: TareaViewModel //view model de notas
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

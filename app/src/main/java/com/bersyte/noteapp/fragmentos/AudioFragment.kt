@@ -20,7 +20,7 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.Date
 
-//private const val LOG_TAG = "AudioRecordTest"
+
 class AudioFragment : Fragment(){
 
     private var mStartRecording: Boolean = true
@@ -28,45 +28,46 @@ class AudioFragment : Fragment(){
     private var recorder: MediaRecorder? = null
     private var player: MediaPlayer? = null
     private lateinit var miContexto: Context
-    var audioguradado = false
+    var audioGuardado = false
+    private var mStartPlaying = true
 
-    // Requesting permission to RECORD_AUDIO
+   // llamado una vez que el fragmento está asociado con su actividad.
     override fun onAttach(context: Context) {
         super.onAttach(context)
         miContexto = context
     }
-
+    //crea la jerarquia de vistas asociadas al fragmento
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentAudioBinding.inflate(layoutInflater)
 
-        binding.btnStart.setOnClickListener {
+        binding.btnStart.setOnClickListener {   //boton de incio de grabacion
             Toast.makeText(context, "Grabando", Toast.LENGTH_LONG).show()
             revisarPermisos()
-            audioguradado=true
+            audioGuardado=true
         }
 
-        binding.btnStop.setOnClickListener {
-            if (audioguradado==false){
+        binding.btnStop.setOnClickListener { //boton de fin de grabacion
+            if (audioGuardado==false){
                 Toast.makeText(context, "Primero debes grabar un audio", Toast.LENGTH_LONG).show()
             }else{
-                stopRecording()
+                stopRecording() //detiene la grabacion
                 Toast.makeText(context, "Grabacion Detenida", Toast.LENGTH_SHORT).show()
             }
 
         }
-        binding.btnplay.setOnClickListener {
-            if (audioguradado==false){
+        binding.btnplay.setOnClickListener {//boton para reproducir grabacion
+            if (audioGuardado==false){
                 Toast.makeText(context, "Primero debes grabar un audio", Toast.LENGTH_LONG).show()
             }else{
-                onPlay(mStartPlaying)
+                onPlay(mStartPlaying) //reproduce el audio
                 mStartPlaying = !mStartPlaying
             }
         }
 
-       binding.btnGuardar.setOnClickListener{
+       binding.btnGuardar.setOnClickListener{   //boton que guarda el audio
            val file = Multimedia (
                arguments?.getString("id")!!.toInt(),
                "audio",
@@ -107,7 +108,7 @@ class AudioFragment : Fragment(){
         }
     }
 
-    private var mStartPlaying = true
+
 
     private fun onRecord(start: Boolean) = if (start) {
         iniciarGrabacion()
@@ -132,7 +133,6 @@ class AudioFragment : Fragment(){
                     .setNegativeButton("Cancel") { _, _ ->
                     }
                     .setPositiveButton("OK") { _, _ ->
-
                         requestPermissions(
                             arrayOf("android.permission.RECORD_AUDIO",
                                 "android.permission.WRITE_EXTERNAL_STORAGE"),
@@ -141,8 +141,6 @@ class AudioFragment : Fragment(){
                     .show()
             }
             else -> {
-                /*requestPermissionLauncher.launch(
-                    "android.permission.RECORD_AUDIO")*/
                 requestPermissions(
                     arrayOf("android.permission.RECORD_AUDIO",
                         "android.permission.WRITE_EXTERNAL_STORAGE"),

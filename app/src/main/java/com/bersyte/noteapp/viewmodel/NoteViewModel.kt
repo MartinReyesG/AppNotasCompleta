@@ -7,6 +7,7 @@ import com.bersyte.noteapp.model.Note
 import com.bersyte.noteapp.repositorio.RepositorioNotas
 import kotlinx.coroutines.launch
 
+//estos archivos se encargan de las corrutinas de los view model para no consumir tantos recursos
 class NoteViewModel(
     app: Application,
     private val repositorioNotas: RepositorioNotas
@@ -32,7 +33,4 @@ class NoteViewModel(
 
     fun buscarNota(query: String?) =
         repositorioNotas.searchNote(query)
-
-
-
 }
