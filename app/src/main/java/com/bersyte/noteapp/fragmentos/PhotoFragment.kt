@@ -1,6 +1,5 @@
 package com.bersyte.noteapp.fragmentos
 
-import android.R
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
