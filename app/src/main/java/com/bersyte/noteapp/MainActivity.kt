@@ -15,7 +15,6 @@ import com.bersyte.noteapp.viewmodel.TareaViewModelProviderFactory
 
 class MainActivity : AppCompatActivity() {
 
-
     lateinit var navController: NavController
     private lateinit var binding: ActivityMainBinding
     lateinit var noteViewModel: NoteViewModel
@@ -31,13 +30,6 @@ class MainActivity : AppCompatActivity() {
         setUpViewModelTarea()
 
     }
-
-    /*override fun onBackPressed() {
-        if (navController.currentDestination?.id == R.id.updateNoteFragment) {
-            this.toast("No Updates")
-        }
-        super.onBackPressed()
-    }*/
 
     private fun setUpViewModel() {
         val noteDataBase = NoteDatabase.getInstance(this)
