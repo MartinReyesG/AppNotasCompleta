@@ -30,7 +30,7 @@ class ViewMultimediaFragment : Fragment() {
         lifecycleScope.launch {
             val id =  arguments?.getString("id")!!.toInt()
 
-            multimedia = NoteDatabase.getInstance(requireActivity().applicationContext).MultimediaDao().getMultimedia(id+1)
+            multimedia = NoteDatabase.getInstance(requireActivity().applicationContext).MultimediaDao().getMultimedia(id)
         }
 
         rv.adapter = MultimediaAdapter(multimedia)
