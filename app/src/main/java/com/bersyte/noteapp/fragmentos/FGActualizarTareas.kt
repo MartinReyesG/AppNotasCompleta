@@ -139,7 +139,6 @@ class FGActualizarTareas : Fragment(R.layout.fg_actualizar_tarea) {
         val body = binding.etTareaBodyUpdate.text.toString().trim()
         val dates=binding.txtDate.text.toString().trim()
         val times=binding.txtHour.text.toString().trim()
-
         if (title.isNotEmpty()  && dates.isNotEmpty() && times.isNotEmpty()) {
             scheduleNotificaction(title)
             val tarea = Tarea(currentTarea.id, title, subTitle, date, body)
@@ -148,7 +147,7 @@ class FGActualizarTareas : Fragment(R.layout.fg_actualizar_tarea) {
             view?.findNavController()?.navigate(R.id.action_updateTareaFragment_to_homeFragment)
 
         } else {
-            activity?.toast("Ingresa un Titulo")
+            activity?.toast("Ingresa un titulo, fecha u hora")
         }
     }
 

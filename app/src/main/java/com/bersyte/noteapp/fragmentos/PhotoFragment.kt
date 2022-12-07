@@ -49,8 +49,16 @@ class PhotoFragment : Fragment() {
         }
 
         binding.addfoto.setOnClickListener {
-            Toast.makeText(context, "Trabajando en adjuntar foto" +
-                    "", Toast.LENGTH_SHORT).show()
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            intent.addCategory(Intent.CATEGORY_OPENABLE)
+            intent.type = "*/*"
+            val mimetypes = arrayOf("image/*", "video/*","audio/*")
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, mimetypes)
+            startActivityForResult(intent, 111)
+
+
+         //   Toast.makeText(context, "Trabajando en adjuntar foto" +
+          //          "", Toast.LENGTH_SHORT).show()
         }
 
         binding.savePhoto.setOnClickListener {
@@ -69,7 +77,7 @@ class PhotoFragment : Fragment() {
                 binding.addfoto.visibility= View.INVISIBLE
                 binding.description.isEnabled = false
 
-                Toast.makeText(context, "Se guardo cojn exito la foto", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Se guardo con exito la foto", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(context, "Primero debes tomar o adjuntar una foto", Toast.LENGTH_SHORT).show()
             }
@@ -204,8 +212,6 @@ class PhotoFragment : Fragment() {
                     // Permission is granted. Continue the action or workflow
                     // in your app.
                     dispatchTakePictureIntent()
-                } else {
-
                 }
                 return
             }

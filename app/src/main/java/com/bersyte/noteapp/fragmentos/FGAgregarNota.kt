@@ -47,7 +47,7 @@ class FGAgregarNota : Fragment(R.layout.fg_agregar_nota) {
 
         var id=-1
         val bundle = Bundle()
-        //id = arguments?.getString("id")!!.toInt()
+        //var id = arguments?.getString("id")!!.toInt()
 
         bundle.putString("id", id.toString())
         binding.btnFotoT.setOnClickListener {

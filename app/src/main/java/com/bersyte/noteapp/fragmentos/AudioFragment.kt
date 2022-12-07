@@ -67,20 +67,28 @@ class AudioFragment : Fragment(){
             }
         }
 
-       binding.btnGuardar.setOnClickListener{   //boton que guarda el audio
-           val file = Multimedia (
-               arguments?.getString("id")!!.toInt(),
-               "audio",
-               fileName,
-               binding.txtDescripcionNota.text.toString()
-           )
-           //Insert
-           NoteDatabase.getInstance(requireActivity().applicationContext).MultimediaDao().insert(file)
+       binding.btnGuardar.setOnClickListener {   //boton que guarda el audio
+           if (audioGuardado == false) {
+               Toast.makeText(context, "Primero debes grabar un audio", Toast.LENGTH_LONG).show()
+           } else {
 
-           binding.btnStart.visibility = View.INVISIBLE
-           binding.btnStop.visibility = View.INVISIBLE
-           binding.btnGuardar.visibility = View.INVISIBLE
-           binding.txtDescripcionNota.isEnabled = false
+
+               val file = Multimedia(
+                   arguments?.getString("id")!!.toInt(),
+                   "audio",
+                   fileName,
+                   binding.txtDescripcionNota.text.toString()
+               )
+               //Insert
+               NoteDatabase.getInstance(requireActivity().applicationContext).MultimediaDao()
+                   .insert(file)
+
+               binding.btnStart.visibility = View.INVISIBLE
+               binding.btnStop.visibility = View.INVISIBLE
+               binding.btnGuardar.visibility = View.INVISIBLE
+               binding.txtDescripcionNota.isEnabled = false
+               Toast.makeText(context, "Se guardo con exito el audio", Toast.LENGTH_SHORT).show()
+           }
        }
         return binding.root
     }

@@ -57,7 +57,6 @@ class  NotificationUtils(base: Context) : ContextWrapper(base) {
             .setContentTitle(titulo)
             .setContentText("Tienes una tarea pendiente")
             .setSmallIcon(R.drawable.ic_done)
-            .setColor(Color.YELLOW)
             .setContentIntent(pendingIntent)
             .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
             .setAutoCancel(true)

@@ -110,6 +110,7 @@
 
 
     <LinearLayout
+
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -150,5 +151,6 @@
             android:layout_marginLeft="20dp"
             android:src="@drawable/ic_snippet_folder" />
 
-    </LinearLayout>
+    </LinearLayout
+    >
 </androidx.constraintlayout.widget.ConstraintLayout>
