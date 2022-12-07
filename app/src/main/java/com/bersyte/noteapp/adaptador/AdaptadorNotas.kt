@@ -61,7 +61,7 @@ class AdaptadorNotas : RecyclerView.Adapter<AdaptadorNotas.NoteViewHolder>() {
 
         holder.itemView.setOnClickListener { view ->
             val direction = FGInicioDirections
-                .actionHomeFragmentToUpdateNoteFragment(currentNote)
+                .actionHomeFragmentToUpdateNoteFragment(currentNote) //nos manda a la pantalla de actualizar nota
             view.findNavController().navigate(direction)
         }
     }

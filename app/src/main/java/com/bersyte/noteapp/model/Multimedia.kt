@@ -3,6 +3,8 @@ package com.bersyte.noteapp.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
+//modelo de la multimedia (tabla)
 @Entity
 class Multimedia (
     @PrimaryKey(autoGenerate = true)

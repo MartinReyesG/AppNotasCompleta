@@ -5,9 +5,12 @@ import androidx.room.*
 import com.bersyte.noteapp.model.Note
 import com.bersyte.noteapp.model.Tarea
 
+
+//El room se encarga de guardar los datos de manera local y realiza las query correspondientes
+//para las notas y tareas. Esto es basa en el modelo Note de donde obtiene los datos
 @Dao
 interface NoteDao {
-
+    //consultas de notas
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertarNota(note: Note)
 
@@ -24,7 +27,7 @@ interface NoteDao {
     fun searchNote(query: String?): LiveData<List<Note>>
 
 
-
+//consultas de tareas
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertarTarea(tarea: Tarea)
 

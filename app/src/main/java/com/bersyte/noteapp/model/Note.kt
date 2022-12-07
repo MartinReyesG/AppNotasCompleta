@@ -4,7 +4,7 @@ import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
-
+//modelo de las tareas y notas (tablas)
 @Entity(tableName = "notes")
 @Parcelize
 data class Note(
