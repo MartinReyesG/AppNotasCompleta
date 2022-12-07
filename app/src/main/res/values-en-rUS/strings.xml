@@ -1,2 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <string name="app_name">NoteIS</string>
+    <string name="image">Image</string>
+    <string name="bersyte">Bersyte</string>
+
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="schedule_notification">Schedule notification</string>
+
+    <string name="alerta_borrarIMG_titulo">Delete Image</string>
+    <string name="alerta_borrarIMG_mensaje">Are you sure you want to delete the picture?</string>
+    <string name="cancelar">CANCEL</string>
+    <string name="aceptar">ACCEPT</string>
+    <string name="alerta_borrarVIDEO_titulo">Delete video</string>
+    <string name="alerta_borrarVIDEO_mensaje">Are you sure you want to delete the video?</string>
+    <string name="hello_blank_fragment">Hello blank snippet</string>
+    <string name="titulo">Title</string>
+    <string name="descripcion">Description</string>
+    <string name="clip">Clip</string>
+    <string name="guardar">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="type">Type</string>
+    <string name="fecha_inicio">Start date</string>
+    <string name="fecha_fin">End date</string>
+    <string name="hora">Time</string>
+    <string name="fecha">Date</string>
+    <string name="photo">Picture</string>
+    <string name="tomar_foto">Take picture</string>
+    <string name="tomar_video">Take video</string>
+    <string name="grabar_audio">Record audio</string>
+    <string name="audio_onda">Audio wave</string>
+    <string name="start_recording">Start recording</string>
+    <string name="salir">Exit</string>
+    <string name="recordatorio_listo">Reminder ready</string>
+    <string name="ver_multimedia">Show multimedia</string>
+    <string name="volver">Back</string>
+    <string name="establecer_recordatorio">Set reminder</string>
+    <string name="eliminar">Delete</string>
+    <string name="buscar">Search</string>
+    <string name="buscar_por_titulo">Search by title</string>
+    <string name="Tarea">Tasks</string>
+    <string name="Nota">Notes</string>
+
+    <string name="Noni">You have a task</string>
+    <string name="NoniExp">Notes</string>
+    <string name="Desc">Yo have a to-do 😉</string>
+    <string name="TareaP">Task to do 📕</string>
+
+    <string name="fechadesc">Select the date</string>
+    <string name="horadesc">Select the time</string>
+
+</resources>
