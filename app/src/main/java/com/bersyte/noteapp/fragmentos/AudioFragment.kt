@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 //private const val LOG_TAG = "AudioRecordTest"
-class Audio : Fragment(){
+class AudioFragment : Fragment(){
 
     private var mStartRecording: Boolean = true
     private var fileName: String = ""

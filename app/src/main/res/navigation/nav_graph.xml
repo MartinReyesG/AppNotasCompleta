@@ -187,7 +187,7 @@
         tools:layout="@layout/fragment_view_video" />
     <fragment
         android:id="@+id/audio"
-        android:name="com.bersyte.noteapp.fragmentos.Audio"
+        android:name="com.bersyte.noteapp.fragmentos.AudioFragment"
         android:label="fragment_audio"
         tools:layout="@layout/fragment_audio" />
     <fragment

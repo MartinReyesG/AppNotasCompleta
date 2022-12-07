@@ -3,13 +3,13 @@
     package="com.bersyte.noteapp"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permission -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- permisos de la aplicacion -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />    <!-- permiso para grabar audio-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- permiso para escribir en archivos-->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/><!-- permisos alarmas-->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /><!-- permiso para mandar notificaciones-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- permiso para iniciar la app cuando se reinicia -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- permiso de la camara -->
 
     <application
         android:allowBackup="true"
@@ -27,6 +27,7 @@
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
